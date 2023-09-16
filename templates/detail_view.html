@@ -1,0 +1,22 @@
+{#{<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#{{ object.user }} <br>#}
+{#{{ object.content }} <br>#}
+{#{{ object.createdAt }}<br>#}
+{#{{ object.createdAt | timesince }}<br>#}
+{#</body>#}
+{#</html>}#}
+
+{% extends 'nav.html' %}
+{% block title %}
+    Detail View
+{% endblock %}
+
+{% block content %}
+	{{ object }}
+{% endblock %}

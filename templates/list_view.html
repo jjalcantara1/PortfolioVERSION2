@@ -1,0 +1,17 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% for foo in object_list %}
+    {{ foo.user }} <br>
+    {{ foo.content }} <br>
+    {{ foo.createdAt }}<br>
+    {{ foo.createdAt | timesince }}<br>
+    <br>
+
+{% empty %}
+    {% if request.GET.q %}
+    <li> No Messages found</li>
+    {% else %}
+    <li> No Messages Yet</li>
+    {% endif %}
+{% endfor %}
+{% endblock %}

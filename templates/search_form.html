@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+{#{% include 'tweets/search_form.html' %}#}
+<form method='get' action='{% url 'contact:list-view' %}'>
+{#        kung asan ung error function#}
+    <input type="text" name="q" placeholder="Search here" value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+
+</form>
+
+
+</body>
+</html>
